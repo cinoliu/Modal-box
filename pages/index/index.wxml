@@ -1,0 +1,24 @@
+
+<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>  
+  
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--content-->  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">用户登录</view>  
+  <view class="drawer_content">  
+    <view class="top grid">  
+      <label class="title col-0">账号</label>  
+      <input class="input_base input_h30 col-1" name="phone" value="{{phone}}" bindinput="binphone"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">密码</label>  
+      <input class="input_base input_h30 col-1" name="password" value="{{password}}" bindinput="binpassword"></input>  
+    </view>  
+     
+  </view>  
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>  
+</view> 
